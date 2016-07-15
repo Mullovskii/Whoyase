@@ -1,0 +1,15 @@
+.container
+	.row 
+		.col.s3
+			b Whoясе Чат
+			br
+			label who_я_сегодня
+		.col.s9
+			label Говори от лица персонажа. Яровая простит:
+			/ = simple_form_for @message do |m|
+			/ 	.input-field
+			/ 		= m.input :content
+			form
+				input data-behavior="room_speaker" type="text"
+			div id='messages'
+				= render @messages
