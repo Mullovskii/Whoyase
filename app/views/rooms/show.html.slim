@@ -10,6 +10,9 @@
 	
 	.col.s9
 		.chat_wrap
+			p Привет #{@current_hero.name}
+			//= session[:current_hero]
+			
 			label Говори от лица персонажа. Яровая простит:
 			/ = simple_form_for @message do |m|
 			/ 	.input-field

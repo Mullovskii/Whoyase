@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @hero.name
+p
+  strong About:
+  = @hero.about
+p
+  strong Ip:
+  = @hero.ip
+
+= link_to 'Edit', edit_hero_path(@hero)
+'|
+= link_to 'Back', heros_path

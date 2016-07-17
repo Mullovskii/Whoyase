@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :heros
   root to: 'rooms#show'
   mount ActionCable.server => '/cable'
 
