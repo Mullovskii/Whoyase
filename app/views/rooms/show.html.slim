@@ -11,6 +11,7 @@
 	.col.s9
 		.chat_wrap
 			label Говори от лица персонажа. Яровая простит:
+			= @ip
 			/ = simple_form_for @message do |m|
 			/ 	.input-field
 			/ 		= m.input :content
