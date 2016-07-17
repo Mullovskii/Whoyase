@@ -29,6 +29,7 @@ gem 'redis', '~> 3.0'
 gem "slim-rails"
 gem 'materialize-sass'
 
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
