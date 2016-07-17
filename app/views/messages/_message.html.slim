@@ -1,4 +1,12 @@
 - cache message do
-	.message 
-		= message.content
+	.message
+		ul
+			li 
+				.hero
+					=image_tag("batman.png", class: "hero_small_avatar")
+			li
+				.content
+					.time
+						= time_ago_in_words(message.created_at) + ' назад' 
+					= message.content
  

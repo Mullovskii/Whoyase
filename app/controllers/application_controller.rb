@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   	#session[:current_hero] = Hero.order("RANDOM()").first.id
   	if session[:current_hero] == nil
   		if Hero.all.length < 1
-  			Hero.create! name: "Гоблин"
+  			Hero.create! name: "Бэтмен"
   		end 
   		session[:current_hero] = Hero.order("RANDOM()").first.id
   		@current_hero = Hero.find_by_id(session[:current_hero])

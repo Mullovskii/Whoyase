@@ -1,22 +1,58 @@
+.col.s12
+		.day_theme
+			
+			.top_logo
+				= image_tag("logo.png", class: "top_logo")
+			.theme_title
+				| ТЕМА ДНЯ:
+			.photo_holder
+			= image_tag("theme1.png", class: "theme_photo")
+			.theme_description
+				|Собачки Шувалова
+			
 
-.row 
+.row
+	/ .col.s12
+	/ 	.day_theme
+
 	.col.s3
 		.logo_wrap
-
 			= image_tag("batman.png", class: "hero_big_avatar")
+		.quotes_wrap
+			| Сгенерить цитатку
+			i.material-icons fast_forward
+		/ 	| — Твои глаза. Глаза Дьявола. Совсем как у него.
+		/ 	|— У кого? У Супермена? Его летающие дружки схватили Бэтмена. Моего Бэтмена!.. Нашего Бэтмена.
+		/ 	|	— Тихо! А не то я надену на тебя наручники и оставлю полицейским.
+		/ 	|	— Тогда зачем ты меня от них спас?
+		/ .quotes_wrap
+		/ 	| – Ты сам боролся с упадком Готэма многие годы всеми силами, всеми средствами, всем своим моральным авторитетом, и всем, чего ты смог добиться, была ложь. Теперь ты понимаешь: Готэм уже не спасти.
+		/ 	|– Нет.
+		/ 	|– Позволь ему умереть.
+		/ 	|– НЕТ!
 		
 	
 	.col.s9
 		.chat_wrap
-			= image_tag("logo.png", class: "logo")
-			Привет #{@current_hero.name}
-			//= session[:current_hero]
+			= image_tag("logo.png", class: "bottom_logo")
+			.role_wrap
+				| Сейчас ты 
+				.name
+					= @current_hero.name
 			
-			label Говори от лица персонажа. Яровая простит:
+			
+			.hint
+				| Говори, #{@current_hero.name}. Яровая простит:
 			/ = simple_form_for @message do |m|
 			/ 	.input-field
 			/ 		= m.input :content
 			.input-field
-				input data-behavior="room_speaker" type="text"
+				input data-behavior="room_speaker" type="text" id="test"
+				label for="test" ...
 			div id='messages'
 				= render @messages
+
+
+
+
+

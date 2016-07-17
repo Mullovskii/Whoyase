@@ -143,8 +143,41 @@ ul {
     padding: 20px 20px;
   	}
 }
-.hero_big_avatar{
+
+.message{
+	ul
+	li{
+		display: inline-block;
+		.content{
+			float:right;
+			padding-left: 10px;
+			.time{
+				color: rgba(128, 128, 128, 0.59);
+				font-size: 11px;
+				font-weight: 100;
+			}
+		}
+	}
+}
+.quotes_wrap{
+	padding: 10px;
 	max-width: 100px;
+	background-color: #c4a180;
+	margin-left: 30px;
+	color: white;
+	font-size: 10px;
+	font-weight: 100;
+	@media(min-width: 768px){
+    font-size: 12px;
+  	}
+	i{
+	padding-left: 10px;
+	vertical-align: bottom;
+	}
+}
+
+.hero_big_avatar{
+	max-width: 170px;
 	display: block;
     margin-left: auto;
     margin-right: auto;
@@ -153,18 +186,132 @@ ul {
   	}
 }
 
-.logo{
+.hero_small_avatar{
+	max-width: 30px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	@media(min-width: 768px){
+    	max-width: 30px;
+  	}
+}
+
+.top_logo{
+	max-width: 100px;
+	padding-top: 10px;
+	padding-left: 10px;
+	display: inline-block;
+	@media(min-width: 768px){
+    	padding-top: 30px;
+    	padding-bottom: 6px;
+    	max-width: 150px;
+  	}
+}
+
+.bottom_logo{
 	max-width: 150px;
 	padding-bottom: 15px;
 	display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 15px;
+}
+
+.theme_photo{
+	max-width: 150px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @media(min-width: 768px){
+    	max-width: 450px;
+		padding: 15px;
+  	}
+}
+.photo_holder{
+	float:left;
+}
+
+.theme_title{
+	font-size: 11px;
+	font-weight: 100;
+	padding-bottom: 15px;
+	padding-left: 21px;
+	margin-bottom: -76px;
+	@media(min-width: 768px){
+    	font-size: 15px;
+		font-weight: 100;
+    	padding-bottom: 15px;
+    	margin-bottom: -135px;
+  	}
+}
+
+.theme_description{
+	font-size: 20px;
+	font-weight: 900;
+	margin-top: -29px;
+	text-transform: uppercase;
+	padding-left: 21px;
+	max-width: 200px;
+	line-height: 15px;
+
+	@media(min-width: 768px){
+    	font-size: 60px;
+		font-weight: 900;
+    	margin-top: -104px;
+    	text-transform: uppercase;
+    	padding-left: 21px;
+    	max-width: 200px;
+    	line-height: 45px;
+  	}
+}
+
+.role_wrap{
+	text-align: center;
+	font-size: 20px;
+	font-weight: 100;
+	color: #c4a180;
+	@media(min-width: 768px){
+    font-size: 30px;
+  }
+}
+.name{
+	font-weight: 900;
+	display: inline-block;
+	padding-bottom: 6px;
+	@media(min-width: 768px){
+    padding-bottom: 10px;
+  	}
 }
 
 .chat_wrap{
-	max-width: 600px;
+	max-width: 700px;
 	padding: 20px 20px;
 	@media(min-width: 768px){
     padding: 20px 20px;
   }
+}
+.day_theme{
+	background-color: #26a69a;
+	height:100px;
+	@media(min-width: 768px){
+    	height: 300px;
+  	}
+
+}
+.top_logo{
+	text-align: left;
+	@media(min-width: 768px){
+    	text-align: left;
+  	}
+}
+
+.hint{
+	font-size: 9px;
+	color: rgba(196, 161, 128, 0.61);
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 10px;
+	@media(min-width: 768px){
+    font-size: 11px;
+  	}
 }
