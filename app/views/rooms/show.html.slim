@@ -5,15 +5,16 @@
 			b WHOЯСЕ_ЧАТ
 			br
 			label who_я_сегодня
-			= image_tag("whoyase.png", width: '200px')
+			= image_tag("whoyase.png", class: "logo_main")
 		
 	
 	.col.s9
-		label Говори от лица персонажа. Яровая простит:
-		/ = simple_form_for @message do |m|
-		/ 	.input-field
-		/ 		= m.input :content
-		.input-field
-			input data-behavior="room_speaker" type="text"
-		div id='messages'
-			= render @messages
+		.chat_wrap
+			label Говори от лица персонажа. Яровая простит:
+			/ = simple_form_for @message do |m|
+			/ 	.input-field
+			/ 		= m.input :content
+			.input-field
+				input data-behavior="room_speaker" type="text"
+			div id='messages'
+				= render @messages
