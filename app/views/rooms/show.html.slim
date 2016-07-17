@@ -2,15 +2,14 @@
 .row 
 	.col.s3
 		.logo_wrap
-			b WHOЯСЕ_ЧАТ
-			br
-			label who_я_сегодня
-			= image_tag("whoyase.png", class: "logo_main")
+
+			= image_tag("batman.png", class: "hero_big_avatar")
 		
 	
 	.col.s9
 		.chat_wrap
-			p Привет #{@current_hero.name}
+			= image_tag("logo.png", class: "logo")
+			Привет #{@current_hero.name}
 			//= session[:current_hero]
 			
 			label Говори от лица персонажа. Яровая простит:
