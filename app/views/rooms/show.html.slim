@@ -17,7 +17,7 @@
 
 	.col.s3
 		.logo_wrap
-			= image_tag("batman.png", class: "hero_big_avatar")
+			= image_tag("#{@current_hero.id}.png", class: "hero_big_avatar")
 		.quotes_wrap
 			| Сгенерить цитатку
 			i.material-icons fast_forward
@@ -39,20 +39,26 @@
 				| Сейчас ты 
 				.name
 					= @current_hero.name
+				label Говори, #{@current_hero.name}, Яровая простит
 			
+		= simple_form_for @message, html: { multipart: true }, remote: true, authenticity_token: true do |f|
 			
-			.hint
-				| Говори, #{@current_hero.name}. Яровая простит:
-			/ = simple_form_for @message do |m|
-			/ 	.input-field
-			/ 		= m.input :content
 			.input-field
-				input data-behavior="room_speaker" type="text" id="test"
-				label for="test" ...
-			div id='messages'
-				= render @messages
+    			= f.input :content, required: false, :input_html => { class: 'materialize-textarea' }, data: {textarea: "message"}, label: false
+			/ .input-field
+			/ 	= f.text_area :content, class: "form-control", data: {textarea: "message"}
+			.input-btn-field
+		  		= f.submit "+", class: "btn-floating btn-large waves-effect waves-light red", data: {send: "message"}
 
+		.panel.panel-default
+  			div id='messages'
+    			= render partial: 'messages/message', collection: @messages
+  			#messages.panel-body.hidden
+  
 
+		/div id='messages'
+			/= render @messages
+		
 
 
 

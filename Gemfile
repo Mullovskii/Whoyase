@@ -28,6 +28,7 @@ gem 'redis', '~> 3.0'
 # gem 'bcrypt', '~> 3.1.7'
 gem "slim-rails"
 gem 'materialize-sass'
+gem 'simple_form'
 
 
 # Use Capistrano for deployment

@@ -9,8 +9,8 @@ class RoomChannel < ApplicationCable::Channel
     # Any cleanup needed when channel is unsubscribed
   end
 
-  def speak(data)
-  	#ActionCable.server.broadcast 'room_channel', message: data['message']
-  	Message.create! content: data['message'] #, author_id: '3' #session[:current_hero].id
-  end
+  # def speak(data)
+  # 	#ActionCable.server.broadcast 'room_channel', message: data['message']
+  # 	Message.create! content: data['message'] #, author_id: '3' #session[:current_hero].id
+  # end
 end

@@ -3,11 +3,11 @@
 		ul
 			li 
 				.hero
-					=image_tag("batman.png", class: "hero_small_avatar")
+					=image_tag("#{message.author_id}.png", class: "hero_small_avatar")
 			li
 				.content
 					.time
 						= time_ago_in_words(message.created_at) + ' назад' 
 					= message.content
-					/ = session[:current_hero]
+					
  

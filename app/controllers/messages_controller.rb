@@ -1,11 +1,19 @@
 class MessagesController < ApplicationController
 
-	def new
-		
-	end
-	
-	def create
-		@hero = Hero.new(hero_params)
-	end
+  def create
+    message = Message.new(message_params)
+    message.author_id = @current_hero.id
+    if message.save
+      ActionCable.server.broadcast 'room_channel',
+        message: message.content,
+        author_id: message.author_id
+      head :ok
+    end
+  end
 
+  private
+
+    def message_params
+      params.require(:message).permit(:content, :author_id)
+    end
 end

@@ -1,0 +1,10 @@
+App.room = App.cable.subscriptions.create('RoomChannel', {  
+  
+  received: function(data) {
+    return $('#messages').prepend(this.renderMessage(data));
+  },
+
+  renderMessage: function(data) {
+    return "<div class='message'><ul><li><div class='hero'><img src='/assets/" + data.author_id + ".png' class='hero_small_avatar'></div></li><li><div class='content'><div class='time'>только что</div>" + data.message + "</div></li></ul></div>";
+	}
+});
