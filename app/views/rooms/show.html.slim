@@ -18,9 +18,9 @@
 	.col.s3
 		.logo_wrap
 			= image_tag("#{@current_hero.id}.png", class: "hero_big_avatar")
-		.quotes_wrap
-			| Сгенерить цитатку
-			i.material-icons fast_forward
+		/ .quotes_wrap
+		/ 	| Сгенерить цитатку
+		/ 	i.material-icons fast_forward
 		/ 	| — Твои глаза. Глаза Дьявола. Совсем как у него.
 		/ 	|— У кого? У Супермена? Его летающие дружки схватили Бэтмена. Моего Бэтмена!.. Нашего Бэтмена.
 		/ 	|	— Тихо! А не то я надену на тебя наручники и оставлю полицейским.
@@ -40,20 +40,22 @@
 				.name
 					= @current_hero.name
 				label Говори, #{@current_hero.name}, Яровая простит
-			
-		= simple_form_for @message, html: { multipart: true }, remote: true, authenticity_token: true do |f|
-			
-			.input-field
-    			= f.input :content, required: false, :input_html => { class: 'materialize-textarea' }, data: {textarea: "message"}, label: false
-			/ .input-field
-			/ 	= f.text_area :content, class: "form-control", data: {textarea: "message"}
-			.input-btn-field
-		  		= f.submit "+", class: "btn-floating btn-large waves-effect waves-light red", data: {send: "message"}
+		.wrap_form	
+			= simple_form_for @message, html: { multipart: true }, remote: true, authenticity_token: true do |f|
+				
+				.input-field
+	    			= f.input :content, required: false, :input_html => { class: 'materialize-textarea' }, data: {textarea: "message"}, label: false
+				/ .input-field
+				/ 	= f.text_area :content, class: "form-control", data: {textarea: "message"}
+				.input-btn-field
+			  		= f.submit "+", class: "btn-floating btn-large waves-effect waves-light red", data: {send: "message"}
 
 		.panel.panel-default
   			div id='messages'
     			= render partial: 'messages/message', collection: @messages
   			#messages.panel-body.hidden
+  			.paginate_block
+  				= will_paginate @messages
   
 
 		/div id='messages'

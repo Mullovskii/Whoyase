@@ -1,25 +1,28 @@
-h1 Listing heros
+.row
+  h1 Добавь героя
 
-table
-  thead
-    tr
-      th Name
-      th About
-      th Ip
-      th
-      th
-      th
-
-  tbody
-    - @heros.each do |hero|
+  table
+    thead
       tr
-        td = hero.name
-        td = hero.about
-        td = hero.ip
-        td = link_to 'Show', hero
-        td = link_to 'Edit', edit_hero_path(hero)
-        td = link_to 'Destroy', hero, data: { confirm: 'Are you sure?' }, method: :delete
+        th Имя
+        th Описание
+        th Номер
+        th
+        th
+        th
 
-br
+    tbody
+      - @heros.each do |hero|
+        tr
+          td = hero.name
+          td = hero.about
+          td = hero.ip
+          td = link_to 'Показать', hero
+          td = link_to 'Редактировать', edit_hero_path(hero)
+          td = link_to 'Удалить', hero, data: { confirm: 'Are you sure?' }, method: :delete
 
-= link_to 'New Hero', new_hero_path
+  br
+
+  = link_to 'Добавить нового', new_hero_path
+  br
+  = link_to 'Удалить все сообщения', clear_messages_path

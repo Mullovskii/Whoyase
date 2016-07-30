@@ -7,6 +7,7 @@ class HerosController < ApplicationController
     @heros = Hero.all
   end
 
+
   # GET /heros/1
   # GET /heros/1.json
   def show

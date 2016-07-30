@@ -146,6 +146,11 @@ ul {
 	text-align: center;
 }
 
+.wrap_form{
+  max-width: 600px;
+  margin-left: 30px;
+}
+
 .logo_wrap{
 	padding: 10px;
 	@media(min-width: 768px){
@@ -186,13 +191,36 @@ ul {
 }
 
 .hero_big_avatar{
-	max-width: 170px;
+	max-width: 132px;
 	display: block;
     margin-left: auto;
     margin-right: auto;
 	@media(min-width: 768px){
     	max-width: 300px;
   	}
+}
+label{
+  font-size: 13px;
+  max-width: 172px;
+  @media(min-width: 768px){
+      font-size: 15px;
+      max-width: 700px;
+    }
+}
+
+.btn-floating{
+  @media(min-width: 768px){
+    }
+}
+
+.paginate_block{
+  margin-left: 30px;
+}
+
+.pagination{
+  a{
+  color:grey;
+  }
 }
 
 .hero_small_avatar{

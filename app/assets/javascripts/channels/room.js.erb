@@ -1,6 +1,7 @@
 App.room = App.cable.subscriptions.create('RoomChannel', {  
   
   received: function(data) {
+  	$('#message_content').val('').blur();
     return $('#messages').prepend(this.renderMessage(data));
   },
 
