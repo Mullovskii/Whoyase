@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
 before_action :current_hero , only: [:show]
   def show
   	@message = Message.new
-  	@messages = Message.paginate(:page => params[:page], :per_page => 5)
+  	@messages = Message.paginate(:page => params[:page], :per_page => 100)
   	@current_hero = Hero.find_by_id(session[:current_hero])
   end
 
