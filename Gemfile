@@ -30,6 +30,7 @@ gem 'redis', '~> 3.0'
 gem "slim-rails"
 gem 'materialize-sass'
 gem 'simple_form'
+gem 'carrierwave'
 
 
 # Use Capistrano for deployment
